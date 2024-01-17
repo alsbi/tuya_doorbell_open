@@ -41,6 +41,7 @@ class TuyaDoorBellOpen(ButtonEntity):
 
         self._name = name
         self._unique_id = self._name.lower().replace(' ', '_')
+        _LOGGER.debug(f'Init {self._unique_id}')
 
     def press(self) -> None:
         openapi = TuyaOpenAPI(API_ENDPOINT, self.access_id, self.access_key)
@@ -52,3 +53,4 @@ class TuyaDoorBellOpen(ButtonEntity):
                 }
             }
         )
+        _LOGGER.debug(f'Press button {self._unique_id}')
