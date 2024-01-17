@@ -7,3 +7,4 @@ ACCESS_KEY = "ACCESS_KEY"
 
 DEVICE_ID = "DEVICE_ID"
 ICON = 'icon'
+CONF_NAME = "name"
