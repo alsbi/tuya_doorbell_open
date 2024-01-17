@@ -4,9 +4,7 @@ import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
 from homeassistant.components.button import ButtonEntity
 from homeassistant.helpers.config_validation import (PLATFORM_SCHEMA)
-from tuya_connector import (
-    TuyaOpenAPI,
-)
+from tuya_connector import  TuyaOpenAPI
 
 from .const import *
 
@@ -42,30 +40,6 @@ class TuyaDoorBellOpen(ButtonEntity):
 
         self.openapi = TuyaOpenAPI(API_ENDPOINT, self.access_id, self.access_key)
         self.openapi.connect()
-
-        _LOGGER.debug(f'Start button {self._unique_id}')
-
-    @property
-    def extra_state_attributes(self):
-        """Return the device state attributes."""
-        attrs = {
-            'friendly_name': self._name,
-            'unique_id': self._unique_id,
-            "manufacturer": "tuya_api",
-        }
-        return attrs
-
-    @property
-    def name(self):
-        if self.no_domain_:
-            return self._name
-        else:
-            return super().name
-
-    @property
-    def unique_id(self):
-        """Return a unique ID."""
-        return self._unique_id
 
     def press(self) -> None:
         response = self.openapi.post(
