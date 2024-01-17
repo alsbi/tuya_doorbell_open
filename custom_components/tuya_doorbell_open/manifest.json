@@ -1,1 +1,12 @@
 
+{
+  "domain": "tuya_doorbell_open",
+  "name": "tuya_doorbell_open",
+  "documentation": "tuya_doorbell_open",
+  "dependencies": [],
+  "requirements": ["tuya-connector-python==0.1.2"],
+  "version": "2.0.0",
+  "codeowners": [
+    "@alsbi"
+  ]
+}
