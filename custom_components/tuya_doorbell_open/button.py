@@ -16,9 +16,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(ACCESS_ID): cv.string,
     vol.Required(ACCESS_KEY): cv.string,
     vol.Required(DEVICE_ID): cv.string,
-    vol.Optional(ICON): cv.string,
 })
-
 
 async def async_setup_platform(
         hass,
