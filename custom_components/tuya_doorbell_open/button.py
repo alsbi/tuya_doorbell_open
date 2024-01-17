@@ -40,9 +40,6 @@ class TuyaDoorBellOpen(ButtonEntity):
         self.device_id = device_id
 
         self._name = name
-        self.no_domain_ = self._name.startswith("!")
-        if self.no_domain_:
-            self._name = self.name[1:]
         self._unique_id = self._name.lower().replace(' ', '_')
 
     def press(self) -> None:
