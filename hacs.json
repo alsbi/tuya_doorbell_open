@@ -1,6 +1,5 @@
 {
   "name": "tuya_door_bell_open",
   "render_readme": true,
-   "requirements": ["tuya-connector-python==0.1.2"],
   "country": "RU"
 }
