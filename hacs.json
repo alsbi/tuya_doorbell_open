@@ -1,0 +1,6 @@
+{
+  "name": "HHC-N8I8OP relay",
+  "render_readme": true,
+   "requirements": ["tuya-connector-python ==0.1.2"],
+  "country": "RU"
+}
