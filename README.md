@@ -5,10 +5,9 @@
 ```
 tuya_door_bell_open:
 
-switch:
+button:
   - platform: tuya_door_bell_open
-    name: switch1
-    ip: IP
-    port: 5000
-    lights: 8
+    ACCESS_ID = "ACCESS_ID"
+    ACCESS_KEY = "ACCESS_KEY"
+    DEVICE_ID = "DEVICE_ID"
 ```
